@@ -14,7 +14,8 @@ Fuclone package files:
 
 Installation: 
 1. Download and unzip fuclone.zip to local drive.
-2. run fuclone.exe file
+2. modify fuclone.ini file 
+3. run fuclone.exe file
 
 
 Setup:
