@@ -1,5 +1,5 @@
 #######################################
-##          FUCLONE 1.0 beta         ##
+##          FUCLONE 0.1 beta         ##
 #######################################
 
 Fuclone application clones tables from Fusion cloud to local database.
