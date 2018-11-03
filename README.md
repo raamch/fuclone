@@ -13,9 +13,13 @@ Fuclone package files:
 5. Readme.txt
 
 Installation: 
-1. Download and unzip fuclone.zip to local drive.
+1. Download and unzip fuclone.zip to local drive
 2. modify fuclone.ini file 
-3. run fuclone.exe file
+3. run fuclone.exe -p setup. This will create DB and loads metadata
+
+Cloning Tables:
+1. modify table.txt by adding table names 1 per line
+2. run fuclone.exe
 
 
 Setup:
@@ -30,7 +34,7 @@ Setup:
 
 Usage: various examples given below. Also, fuclone -h or fuclone --help shows different options to run.
 ------
-1. fucone 			: runs with 2nd section details for fusion and table.txt for input list
+1. fucone 		: runs with 2nd section details for fusion and table.txt for input list
 2. fuclone -e uat	: runs for uat environment with connection details uat section in ini file. 
 3. fuconle -e uat -t HZ_PARTIES: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
-
+4. fuclone -p metadata 	: reloads metadata 
