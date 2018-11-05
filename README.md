@@ -27,7 +27,7 @@ Setup:
 	b) You can add any number of Fusion environments as sections, which can be passed on as run time option using switches --env or -e followed by the environment name. 
 		If no environment name is passed then, 2nd section is considered for Fusion connection details.
 
-2. tables.txt file: input file with list of table names to clone.
+2. tables.txt file: input file with list of table names to clone. wildcard % use is allowed to specify a table name pattern.
 
 Cloning Tables:
 ------
