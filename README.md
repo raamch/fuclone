@@ -20,12 +20,6 @@ Installation:
 4. follow on screen instructions
 5. wait for completion message
 
-Cloning Tables:
-------
-1. modify table.txt by adding table names 1 per line
-2. run fuclone.exe
-
-
 Setup:
 ------
 1. Fuclone.ini file: Key file storing connection details to all environments in separate sections which must enclosed between []. ini file is self explanatory for section parameters. 
@@ -34,6 +28,11 @@ Setup:
 		If no environment name is passed then, 2nd section is considered for Fusion connection details.
 
 2. tables.txt file: input file with list of table names to clone.
+
+Cloning Tables:
+------
+1. modify table.txt by adding table names 1 per line
+2. run fuclone.exe
 
 help: fuclone --help or fuclone -h
 -----
