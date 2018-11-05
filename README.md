@@ -33,9 +33,27 @@ Setup:
 
 2. tables.txt file: input file with list of table names to clone.
 
+help: fuclone --help or fuclone -h
+-----
+usage: fuclone [-h] [--env ENV] [--log LOG] [--tables TABLES]
+               [--process PROCESS]
 
-Usage: various examples given below. Also, fuclone -h or fuclone --help shows different options to run.
-------
+Clone Fusion Cloud Database
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --env ENV, -e ENV     fusion cloud environment name
+  --log LOG, -l LOG     log level to generate log file. allowed values: warning, error, info, debug
+  --tables TABLES, -t TABLES
+                        tables to clone from cloud, ex: T1, T2
+  --process PROCESS, -p PROCESS
+                        allowed values: clone, metadata, setup
+                        clone: clone tables from cloud. default, if not given
+                        metadata: reloads FND tables from cloud
+                        setup: setup local db and loads FND tables
+
+Examples: 
+--------
 1. fucone 		: runs with 2nd section details for fusion and table.txt for input list
 2. fuclone -e uat	: runs for uat environment with connection details uat section in ini file. 
 3. fuconle -e uat -t HZ_PARTIES: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
