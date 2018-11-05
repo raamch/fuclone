@@ -13,6 +13,7 @@ Fuclone package files:
 5. Readme.txt
 
 Installation: 
+-----
 1. Download and unzip fuclone.zip to local drive
 2. modify fuclone.ini file 
 3. run fuclone.exe -p setup. This will create DB and loads metadata
@@ -20,6 +21,7 @@ Installation:
 5. wait for completion message
 
 Cloning Tables:
+------
 1. modify table.txt by adding table names 1 per line
 2. run fuclone.exe
 
