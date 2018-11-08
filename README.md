@@ -1,5 +1,5 @@
 #######################################
-##          FUCLONE 0.1 beta         ##
+##          FUCLONE 0.2 beta         ##
 #######################################
 
 Fuclone application clones tables from Fusion cloud to local database.
@@ -39,6 +39,9 @@ help: fuclone --help or fuclone -h
 usage: fuclone [-h] [--env ENV] [--log LOG] [--tables TABLES]
                [--process PROCESS]
 
+usage: fuclone [-h] [--env ENV] [--log LOG] [--tables TABLES] [--file FILE]
+               [--process PROCESS]
+
 Clone Fusion Cloud Database
 
 optional arguments:
@@ -46,12 +49,15 @@ optional arguments:
   --env ENV, -e ENV     fusion cloud environment name
   --log LOG, -l LOG     log level to generate log file. allowed values: warning, error, info, debug
   --tables TABLES, -t TABLES
-                        tables to clone from cloud, ex: T1, T2
+                        table(s) to clone from cloud. use with clone or fileload options
+  --file FILE, -f FILE  pipe seperated file path. use with fileload option
   --process PROCESS, -p PROCESS
                         allowed values: clone, metadata, setup
                         clone: clone tables from cloud. default, if not given
                         metadata: reloads FND tables from cloud
                         setup: setup local db and loads FND tables
+                        tables: creates all Fusion tables
+                        fileload: loads table from file., ex: fuclone -p fileload -t TBL -f filepath
 
 Examples: 
 --------
@@ -59,3 +65,14 @@ Examples:
 2. fuclone -e uat	: runs for uat environment with connection details uat section in ini file. 
 3. fuconle -e uat -t HZ_PARTIES: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
 4. fuclone -p metadata 	: reloads metadata 
+5. fuclone -p tables	: creates all tables from metadata.
+6. fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
+
+fileload: 
+--------
+Clone process may fail for a very large table (size in gigs) with timeout error to avoid server crashes. In such cases locate the job, download the file and run fuclone with fileload switch to load table.
+
+Release History:
+----------------
+0.2 beta 08/11/18: 2 new process switches tables and fileload are added to support tables creation and populating tables from a file.
+0.1 beta 01/11/18: Initial beta version released.
