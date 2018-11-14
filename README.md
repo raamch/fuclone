@@ -100,4 +100,4 @@ Release History:
 
 0.2 beta 08/11/18: 2 new process switches tables and fileload are added to support tables creation and populating tables from a file.
 
-0.1 beta 01/11/18: Initial beta version released.
+0.1 beta 01/11/18: Initial beta version released. 
