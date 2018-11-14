@@ -1,5 +1,5 @@
 #######################################
-##          FUCLONE 0.2 beta         ##
+##          FUCLONE 0.3 beta         ##
 #######################################
 
 Fuclone application clones tables from Fusion cloud to local database.
@@ -54,6 +54,9 @@ optional arguments:
   --tables TABLES, -t TABLES
                         table(s) to clone from cloud. use with clone or fileload options
 			
+  --views VIEWS, -v VIEWS
+                        view(s) to create. user with views process
+			
   --file FILE, -f FILE  pipe seperated file path. use with fileload option
   
   --process PROCESS, -p PROCESS
@@ -68,6 +71,8 @@ optional arguments:
 			
                         tables: creates all Fusion tables
 			
+			views: creates fusion views
+			
                         fileload: loads table from file., ex: fuclone -p fileload -t TBL -f filepath
 
 Examples: 
@@ -76,7 +81,8 @@ Examples:
 2. fuclone -e uat	: runs for uat environment with connection details uat section in ini file. 
 3. fuconle -e uat -t HZ_PARTIES: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
 4. fuclone -p metadata 	: reloads metadata 
-5. fuclone -p tables	: creates all tables from metadata.
+5. fuclone -p tables	: creates all tables from metadata
+6. fuclone -p views     : creates all views from metadata
 6. fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
 
 fileload: 
@@ -85,6 +91,8 @@ Clone process may fail for a very large table (size in gigs) with timeout error 
 
 Release History:
 ----------------
+0.3 beta 14/11/18: New process swith Views added. Bug fixes and performance fixes.
+
 0.2 beta 08/11/18: 2 new process switches tables and fileload are added to support tables creation and populating tables from a file.
 
 0.1 beta 01/11/18: Initial beta version released.
