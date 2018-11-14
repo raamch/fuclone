@@ -46,17 +46,28 @@ Clone Fusion Cloud Database
 
 optional arguments:
   -h, --help            show this help message and exit
+  
   --env ENV, -e ENV     fusion cloud environment name
+  
   --log LOG, -l LOG     log level to generate log file. allowed values: warning, error, info, debug
+  
   --tables TABLES, -t TABLES
                         table(s) to clone from cloud. use with clone or fileload options
+			
   --file FILE, -f FILE  pipe seperated file path. use with fileload option
+  
   --process PROCESS, -p PROCESS
+  
                         allowed values: clone, metadata, setup
+			
                         clone: clone tables from cloud. default, if not given
+			
                         metadata: reloads FND tables from cloud
+			
                         setup: setup local db and loads FND tables
+			
                         tables: creates all Fusion tables
+			
                         fileload: loads table from file., ex: fuclone -p fileload -t TBL -f filepath
 
 Examples: 
