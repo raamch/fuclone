@@ -95,7 +95,7 @@ Clone process may fail for a very large table (size in gigs) with timeout error 
 
 Release History:
 ----------------
-0.3 beta 14/11/18: New process swith Views added. Bug fixes and performance fixes.
+0.3 beta 14/11/18: New process switch Views added. Bug fixes and performance fixes.
 
 0.2 beta 08/11/18: 2 new process switches tables and fileload are added to support tables creation and populating tables from a file.
 
