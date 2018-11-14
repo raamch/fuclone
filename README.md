@@ -56,7 +56,7 @@ optional arguments:
                         table(s) to clone from cloud. use with clone or fileload options
 			
   --views VIEWS, -v VIEWS
-                        view(s) to create. user with views process
+                        view(s) to create. use with views process
 			
   --file FILE, -f FILE  pipe seperated file path. use with fileload option
   
