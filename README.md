@@ -77,13 +77,17 @@ optional arguments:
 
 Examples: 
 --------
-1. fucone 		: runs with 2nd section details for fusion and table.txt for input list
-2. fuclone -e uat	: runs for uat environment with connection details uat section in ini file. 
-3. fuconle -e uat -t HZ_PARTIES: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
-4. fuclone -p metadata 	: reloads metadata 
-5. fuclone -p tables	: creates all tables from metadata
-6. fuclone -p views     : creates all views from metadata
-6. fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
+1. fucone 			: runs with 2nd section details for fusion and table.txt for input list
+2. fuclone -e uat		: runs for uat environment with connection details uat section in ini file. 
+3. fuconle -e uat -t HZ_PARTIES	: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
+4. fuclone -p metadata 		: reloads metadata 
+5. fuclone -p tables		: creates all tables from metadata
+6. fuclone -p tables -t HZ_PARTIES: creates HZ_PARTIES table from metadata
+7. fuclone -p tables -t HZ%	: creates tables with name starting 'HZ' from metadata
+8. fuclone -p views     	: creates all views from metadata
+9. fuclone -p views -v DOO_LINES_ALL_V: creates DOO_LINES_ALL_V views from metadata
+10.fuclone -p views -v doo%	: creates all views with name starting 'DOO' from metadata
+11.fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
 
 fileload: 
 --------
