@@ -23,9 +23,10 @@ Installation:
 Setup:
 ------
 1. Fuclone.ini file: Key file storing connection details to all environments in separate sections which must enclosed between []. ini file is self explanatory for section parameters. 
-	a) FUCLONE section stores local database connection info and this is mandatory and 1st section in file. 
-	b) You can add any number of Fusion environments as sections, which can be passed on as run time option using switches --env or -e followed by the environment name. 
-		If no environment name is passed then, 2nd section is considered for Fusion connection details.
+
+	1.1. FUCLONE section stores local database connection info and this is mandatory and 1st section in file. 
+	
+	1.1. You can add any number of Fusion environments as sections, which can be passed on as run time option using switches --env or -e followed by the environment name. If no environment name is passed then, 2nd section is considered for Fusion connection details.
 
 2. tables.txt file: input file with list of table names to clone. wildcard % use is allowed to specify a table name pattern.
 
@@ -71,7 +72,7 @@ optional arguments:
 			
                         tables: creates all Fusion tables
 			
-			views: creates fusion views
+                        views: creates fusion views
 			
                         fileload: loads table from file., ex: fuclone -p fileload -t TBL -f filepath
 
@@ -86,8 +87,8 @@ Examples:
 7. fuclone -p tables -t HZ%	: creates tables with name starting 'HZ' from metadata
 8. fuclone -p views     	: creates all views from metadata
 9. fuclone -p views -v DOO_LINES_ALL_V: creates DOO_LINES_ALL_V views from metadata
-10.fuclone -p views -v doo%	: creates all views with name starting 'DOO' from metadata
-11.fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
+10. fuclone -p views -v doo%	: creates all views with name starting 'DOO' from metadata
+11. fuclone -p fileload -t hz_parties -f c:\hz_parties.txt: loads hz_parties table from psv file hz_parties.txt 
 
 fileload: 
 --------
