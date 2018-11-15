@@ -1,5 +1,5 @@
 #######################################
-##          FUCLONE 0.3 beta         ##
+##             FUCLONE 1.0           ##
 #######################################
 
 Fuclone application clones tables from Fusion cloud to local database.
@@ -78,7 +78,7 @@ optional arguments:
 
 Examples: 
 --------
-* fucone 			: runs with 2nd section details for fusion and table.txt for input list
+* fucone 			: clones tables listed in table.txt
 * fuclone -e uat		: runs for uat environment with connection details uat section in ini file. 
 * fuconle -e uat -t HZ_PARTIES	: runs for uat and clones table HZ_PARTIES, ignoring table.txt file. 
 * fuclone -p metadata 		: reloads metadata 
@@ -96,6 +96,8 @@ Clone process may fail for a very large table (size in gigs) with timeout error 
 
 Release History:
 ----------------
+1.0      15/11/18: Fuclone 1.0 released.
+
 0.3 beta 14/11/18: New process switch Views added. Bug fixes and performance fixes.
 
 0.2 beta 08/11/18: 2 new process switches tables and fileload are added to support tables creation and populating tables from a file.
