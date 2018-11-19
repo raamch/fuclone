@@ -62,8 +62,6 @@ optional arguments:
   
   --process PROCESS, -p PROCESS
   
-                        allowed values: clone, metadata, setup
-			
                         clone: clone tables from cloud. default, if not given
 			
                         metadata: reloads FND tables from cloud
