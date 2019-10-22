@@ -24,7 +24,7 @@ Setup:
 ------
 1. Fuclone.ini file: Key file storing connection details to all environments in separate sections which must enclosed between []. ini file is self explanatory for section parameters. 
 
-	1.1. FUCLONE section stores local database connection info and this is mandatory and 1st section in file. 
+	1.1. FUCLONE section stores local database connection info, Network Proxy and this is mandatory and 1st section in file. If you dont use proxy, then leave the 2 proxy values empty. If you only one proxy for both http and https, then fill the same proxy server name for both. 
 	
 	1.1. You can add any number of Fusion environments as sections, which can be passed on as run time option using switches --env or -e followed by the environment name. If no environment name is passed then, 2nd section is considered for Fusion connection details.
 
@@ -94,10 +94,11 @@ Clone process may fail for a very large table (size in gigs) with timeout error 
 
 Known Issues:
 ------------
-1. **ORA-12899**: ~~If the tool fails with error 'ORA-12899: value too large for column', it means table definition is not matching with its  metadata. It is observed that metadta is not 100% accurate. In suchcase, find the actual length, update respective row in FND_COLUMNS table and run the tool again.~~ This issue is fixed in release 1.1.
+~~ 1.**ORA-12899**: If the tool fails with error 'ORA-12899: value too large for column', it means table definition is not matching with its  metadata. It is observed that metadta is not 100% accurate. In suchcase, find the actual length, update respective row in FND_COLUMNS table and run the tool again.~~ This issue is fixed in release 1.1.
 
 Release History:
 ----------------
+1.1      22/10/19: Release 1.1 - Fix for bug 'ORA-12899: value too large for column',  Added support for Oracle 12C & above, Proxy support. 
 1.0      15/11/18: Fuclone 1.0 released.
 
 0.3 beta 14/11/18: New process switch Views added. Bug fixes and performance fixes.
