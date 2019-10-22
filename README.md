@@ -1,5 +1,5 @@
 #######################################
-##             FUCLONE 1.0           ##
+##             FUCLONE 1.1           ##
 #######################################
 
 Fuclone application clones tables from Fusion cloud to local database.
@@ -94,7 +94,7 @@ Clone process may fail for a very large table (size in gigs) with timeout error 
 
 Known Issues:
 ------------
-If the tool fails with error 'ORA-12899: value too large for column', it means table definition is not matching with its  metadata. It is observed that metadta is not 100% accurate. In suchcase, find the actual length, update respective row in FND_COLUMNS table and run the tool again.
+1. **ORA-12899**: ~~If the tool fails with error 'ORA-12899: value too large for column', it means table definition is not matching with its  metadata. It is observed that metadta is not 100% accurate. In suchcase, find the actual length, update respective row in FND_COLUMNS table and run the tool again.~~ This issue is fixed in release 1.1.
 
 Release History:
 ----------------
