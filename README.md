@@ -99,6 +99,7 @@ Known Issues:
 Release History:
 ----------------
 1.1      22/10/19: Release 1.1 - Fix for bug 'ORA-12899: value too large for column',  Added support for Oracle 12C & above, Proxy support. 
+
 1.0      15/11/18: Fuclone 1.0 released.
 
 0.3 beta 14/11/18: New process switch Views added. Bug fixes and performance fixes.
